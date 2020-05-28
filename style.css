@@ -1,0 +1,16 @@
+body {
+  padding: 10vw;
+  background: url(ressources/images/Background.png);
+ height: 500px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+
+  font-family: Futura;
+  font-size: 16px;
+  line-height: 1.6em;
+}
+
+footer {
+  list-style-type: none;
+}
