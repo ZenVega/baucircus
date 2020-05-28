@@ -1,12 +1,20 @@
-let language = 'de';
-let projectsButton = document.getElementsByClassName
+// let language = 'de';
+// let projectsButton = document.getElementsByClassName
 
 const navSlide = () => {
   const burger = document.querySelector('.burger');
+  const logo = document.getElementsByClassName('logo')[0];
   const nav = document.querySelector('.nav-links');
   const navLinks = document.querySelectorAll('.nav-links li');
-  
+      
   burger.addEventListener('click', () => {
+      //logo moves
+      if(logo.style.animation){
+        logo.style.animation = ''
+      } else {
+        logo.style.animation = `moveOut 0.5s ease forwards`;
+      }
+    
       //Toggle nav
     nav.classList.toggle('nav-active');
       //animation
