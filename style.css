@@ -38,8 +38,17 @@ nav {
   100%{
     margin-top: -60px;
   }
-
 }
+
+@keyframes moveBack{
+  0%{
+    margin-top: -60px;
+  }
+  100%{
+    margin-top: 0px;
+  }
+}
+
 
 .nav-links {
   list-style-type: none;
@@ -76,7 +85,7 @@ main {
   padding: 2em;
   background-color: rgba(255, 255, 255, 0.6);
   max-width: 800px;
-  max-height:80vw;
+  max-height: 65vh;
   overflow: scroll;
 }
 
@@ -91,9 +100,32 @@ footer li {
   margin: 1em;
 }
 
+.about {
+  display: block;
+}
+
+.contact {
+  display: none;
+}
+
+.impressum {
+display: none;
+}
+
+.projects {
+  display: none;
+}
+
+
 @media screen and (max-width: 1024px){
   ul {
     width: 50%
+  }
+}
+
+@media screen and (max-height: 600px){
+  main{
+    max-height: 50vh;
   }
 }
 
@@ -108,7 +140,8 @@ footer li {
     padding-top: 40px;
   }
   main {
-    margin-top: 100px;
+    margin-top: 40px;
+    max-height: 70vh;
   }
 
   .nav-links {
@@ -156,3 +189,4 @@ footer li {
 .motion .line3{
   transform: rotate(45deg) translate(-5px, -5px);
 }
+
