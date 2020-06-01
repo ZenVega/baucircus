@@ -82,11 +82,16 @@ nav {
 
 main {
   margin-top: 60px;
+
   padding: 2em;
   background-color: rgba(255, 255, 255, 0.6);
   max-width: 800px;
   max-height: 65vh;
   overflow: scroll;
+}
+
+main img {
+  width: 100%;
 }
 
 footer {
@@ -110,10 +115,14 @@ footer li {
 }
 
 .impressum {
-display: block;
+display: none;
 }
 
 .projects {
+  display: none;
+}
+
+.datenschutz {
   display: none;
 }
 
@@ -127,6 +136,7 @@ display: block;
 @media screen and (max-height: 600px){
   main{
     max-height: 50vh;
+    
   }
 }
 
@@ -143,6 +153,7 @@ display: block;
   main {
     margin-top: 40px;
     max-height: 60vh;
+  
   }
 
   .nav-links {
@@ -163,6 +174,22 @@ display: block;
 
   .burger{
     display: block;
+  }
+}
+
+@media screen and (max-width: 400px){
+  body {
+    overflow: hidden;
+    padding: 0 10px;
+    font-size: 14px;
+  }
+
+  header {
+    padding-top: 30px;
+  }
+  main {
+    margin-top: 10px;
+    max-height: 70vh;
   }
 }
 

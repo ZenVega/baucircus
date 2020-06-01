@@ -1,17 +1,19 @@
-let language = 'de';
 const projectsButton = document.querySelector('.projectsButton');
 const contactButton = document.querySelector('.contactButton');
 const aboutButton = document.querySelector('.aboutButton');
-const navButtons = [projectsButton, contactButton, aboutButton];
 
 const impressumButton = document.querySelector('.impressumButton');
 const datenschutzButton = document.querySelector('.datenschutzButton');
 const languageSwitch = document.querySelector('.languageSwitch');
 
+const navButtons = [projectsButton, contactButton, aboutButton, impressumButton, datenschutzButton];
+
 const allMainDivs = document.querySelectorAll('main div');
 const aboutDiv = document.querySelector('.about');
 const contactDiv = document.querySelector('.contact');
-const impressumDiv = document.querySelector('.about');
+const projectsDiv = document.querySelector('.projects');
+const impressumDiv = document.querySelector('.impressum');
+const datenschutzDiv = document.querySelector('.datenschutz');
 //console.log(allMainDivs);
 
 const navSlide = () => {
@@ -22,9 +24,9 @@ const navSlide = () => {
       
   burger.addEventListener('click', () => {
       //logo moves
-      if(logo.style.animation){
-        logo.style.animation = `moveBack 0.5s ease forwards`
-      } else {
+      if(logo.style.animation === '0.5s ease 0s 1 normal forwards running moveOut'){
+        logo.style.animation = `moveBack 0.5s ease forwards`;
+      } else if(!logo.style.animation || logo.style.animation == '0.5s ease 0s 1 normal forwards running moveBack'){
         logo.style.animation = `moveOut 0.5s ease forwards`;
       }
       //Toggle nav
@@ -43,16 +45,29 @@ const navSlide = () => {
 }
 
 navSlide();
-
+//switch between displayed divs
 const mainToggle = (obj) => {
-  console.log(obj.target);
   allMainDivs.forEach(div => div.style.display = 'none');
-  if(obj.target === aboutDiv) {
-    console.log('about')
-    aboutDiv.style.display = 'block';
-  }
-  
-};
+
+  switch (obj.target) {
+    case aboutButton:
+      aboutDiv.style.display = 'block';
+      break; 
+    case contactButton:
+      contactDiv.style.display = 'block';
+      break;
+    case projectsButton:
+      projectsDiv.style.display = 'block';
+      break;
+    case impressumButton:
+      impressumDiv.style.display = 'block';
+      break;
+    case datenschutzButton:
+      datenschutzDiv.style.display = 'block';
+      break;
+  };
+}
+
 //add eventListeners for buttons
 navButtons.forEach(button => {
   button.addEventListener('click', (e) => mainToggle(e))
