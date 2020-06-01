@@ -92,6 +92,7 @@ main {
 footer {
   position: absolute;
   bottom: 0px;
+  height: 10vh;
   display: flex;
   list-style-type: none;
 }
@@ -109,7 +110,7 @@ footer li {
 }
 
 .impressum {
-display: none;
+display: block;
 }
 
 .projects {
@@ -141,7 +142,7 @@ display: none;
   }
   main {
     margin-top: 40px;
-    max-height: 70vh;
+    max-height: 60vh;
   }
 
   .nav-links {
