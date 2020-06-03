@@ -8,8 +8,7 @@ body {
   padding: 80px;
   background: url(ressources/images/Background.png);
   background-color: rgb(177, 243, 243);
-  height: 500px;
-  background-position: top center;
+  background-position: center 135px ;
   background-repeat: repeat-y;
   background-size: 80%;
   font-family: Futura;
@@ -25,6 +24,10 @@ nav {
   align-items: center;
   height: 60px;
   background-color: rgba(255, 255, 255, 0.6);
+}
+
+.aboutButton {
+  font-weight: bold;
 }
 
 .logo {
@@ -55,7 +58,10 @@ nav {
   display: flex;
   justify-content: space-around;
   width: 30%;
-  cursor: default;
+}
+
+.nav-links li{
+cursor: pointer;
 }
 
 .nav-links li:hover {
@@ -81,13 +87,14 @@ nav {
 }
 
 main {
-  margin-top: 60px;
-  bottom : 30px;
+  position: absolute;
+  top: 160px;
+  bottom : 55px;
   padding: 2em;
   background-color: rgba(255, 255, 255, 0.6);
   max-width: 800px;
-  max-height: 65vh;
   overflow: scroll;
+  border: 10px solid rgba(255, 255, 255, 0.0);
 }
 
 main img {
@@ -107,6 +114,7 @@ footer {
 
 footer li {
   margin: 1em;
+  cursor: pointer;
 }
 
 .about {
@@ -136,17 +144,11 @@ display: none;
   }
 }
 
-@media screen and (max-height: 600px){
-  main{
-    max-height: 50vh;
-    
-  }
-}
 
 
 @media screen and (max-width: 768px){
   body {
-    overflow: hidden;
+    overflow: scroll;
     padding: 0 40px;
   }
 
@@ -154,8 +156,13 @@ display: none;
     padding-top: 40px;
   }
   main {
-    margin-top: 40px;
-    max-height: 75vh;
+    top:20px;
+    position: relative;
+    margin-bottom: 20px;;
+  }
+
+  footer {
+    position: relative;
   }
 
   .nav-links {

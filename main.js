@@ -4,7 +4,6 @@ const aboutButton = document.querySelector('.aboutButton');
 
 const impressumButton = document.querySelector('.impressumButton');
 const datenschutzButton = document.querySelector('.datenschutzButton');
-const languageSwitch = document.querySelector('.languageSwitch');
 
 const navButtons = [projectsButton, contactButton, aboutButton, impressumButton, datenschutzButton];
 
@@ -48,22 +47,29 @@ navSlide();
 //switch between displayed divs
 const mainToggle = (obj) => {
   allMainDivs.forEach(div => div.style.display = 'none');
+  navButtons.forEach(button => button.style.fontWeight = 'normal');
+
 
   switch (obj.target) {
     case aboutButton:
       aboutDiv.style.display = 'block';
+      aboutButton.style.fontWeight = 'bold';
       break; 
     case contactButton:
       contactDiv.style.display = 'block';
+      contactButton.style.fontWeight = 'bold';
       break;
     case projectsButton:
       projectsDiv.style.display = 'block';
+      projectsButton.style.fontWeight = 'bold';
       break;
     case impressumButton:
       impressumDiv.style.display = 'block';
+      impressumButton.style.fontWeight = 'bold';
       break;
     case datenschutzButton:
       datenschutzDiv.style.display = 'block';
+      datenschutzButton.style.fontWeight = 'bold';
       break;
   };
 }

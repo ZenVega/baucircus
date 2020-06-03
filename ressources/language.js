@@ -1,5 +1,5 @@
 let language = 'de';
-const languageswitch = document.querySelector('.languageSwitch');
+const languageSwitch = document.querySelector('.languageSwitch');
 
 const loadProjects = async(url) => {
   const response = await fetch(url);
@@ -18,10 +18,12 @@ const toggleLanguage = (input) => {
     aboutText.innerHTML  = input.languages.eng.about;
     impressumText.innerHTML  = input.languages.eng.impressum;
     language = "eng";
+    languageSwitch.innerHTML = 'de|<strong>eng</strong>';
   } else {
     aboutText.innerHTML  = input.languages.de.about;
     impressumText.innerHTML  = input.languages.de.impressum;
     language = "de";
+    languageSwitch.innerHTML = '<strong>de</strong>|eng';
   }
 };
 
@@ -29,6 +31,6 @@ switchFunction = () =>{
   loadProjects('./ressources/language.json').then(toggleLanguage);
 }
 
-languageswitch.addEventListener('click', switchFunction)
+languageSwitch.addEventListener('click', switchFunction)
 
 
