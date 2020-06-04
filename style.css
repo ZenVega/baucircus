@@ -33,6 +33,7 @@ nav {
 
 .logo img {
   position:absolute;
+  margin-top:70px
 }
 
 #one {
@@ -41,10 +42,7 @@ nav {
   height: 75px;
   animation: rotate linear 15s infinite;
 }
-@keyframes rotate{
-  from{ transform: rotate(0deg);}
-  to{ transform: rotate(360deg); }
-}
+
 
 #two{
   top: 100px;
@@ -62,6 +60,11 @@ nav {
   top: 128px;
   left: 158px;
   height: 14px;
+}
+
+@keyframes rotate{
+  from{ transform: rotate(0deg);}
+  to{ transform: rotate(360deg); }
 }
 
 @keyframes moveOut{
@@ -179,23 +182,11 @@ footer li {
   margin: 1em;
 }
 
-.about {
+.about{
   display: block;
 }
 
-.contact {
-  display: none;
-}
-
-.impressum {
-display: none;
-}
-
-.projects {
-  display: none;
-}
-
-.datenschutz {
+ .contact, .impressum, .projects, .datenschutz {
   display: none;
 }
 
@@ -206,14 +197,6 @@ display: none;
   }
 }
 
-@media screen and (max-height: 600px){
-  main{
-    max-height: 50vh;
-    
-  }
-}
-
-
 @media screen and (max-width: 768px){
   body {
     overflow: hidden;
@@ -221,36 +204,13 @@ display: none;
     margin-top: 0px;
   }
 
-  header {
-    padding-top: 30px;
-  }
-
-  #one {
-    top: 40px;
-    left: 20px;
-    height: 75px
+  .logo img {
+    margin-top:0px
   }
   
-  #two{
-    top: 60px;
-    left: 45px;
-    height: 25px;
-  }
-  
-  #three{
-    top: 42px;
-    left: 20px;
-    height: 36px;
-  }
-  
-  #four{
-    top: 88px;
-    left: 128px;
-    height: 14px;
-  }
   main {
-    margin-top: 40px;
-    max-height: 75vh;
+    display: flex;
+    margin-top: 30px;
   }
 
   .nav-links {
@@ -258,7 +218,7 @@ display: none;
     left: 0px;
     height:60px;
     width: 70%;
-    top: 40px;
+    top: 10px;
     display: flex;
     align-items: center;
     transform: translateX(150%);
@@ -276,17 +236,33 @@ display: none;
   }
 }
 
-@media screen and (max-width: 400px){
   body {
     overflow: hidden;
     font-size: 14px;
   }
 
-  main {
-    display: flex;
-    margin-top: 10px;
-    max-height: 70vh;
-  }
+#one {
+  top: 10px;
+  left: 20px;
+  height: 75px
+}
+
+#two{
+  top: 30px;
+  left: 45px;
+  height: 25px;
+}
+
+#three{
+  top: 12px;
+  left: 20px;
+  height: 36px;
+}
+
+#four{
+  top: 58px;
+  left: 128px;
+  height: 14px;
 }
 
 .nav-active{
