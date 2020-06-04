@@ -5,7 +5,7 @@
 }
 
 body {
-  padding: 80px;
+  padding: 70px 80px 80px 80px;
   background: url(ressources/images/Background.png);
   background-color: rgb(177, 243, 243);
   height: 500px;
@@ -23,12 +23,45 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 60px;
+  height: 80px;
   background-color: rgba(255, 255, 255, 0.6);
 }
 
 .logo {
-  letter-spacing: 5px;
+ padding-top: 150px;
+}
+
+.logo img {
+  position:absolute;
+}
+
+#one {
+  top: 80px;
+  left: 50px;
+  height: 75px;
+  animation: rotate linear 15s infinite;
+}
+@keyframes rotate{
+  from{ transform: rotate(0deg);}
+  to{ transform: rotate(360deg); }
+}
+
+#two{
+  top: 100px;
+  left: 75px;
+  height: 25px;
+}
+
+#three{
+  top: 82px;
+  left: 50px;
+  height: 36px;
+}
+
+#four{
+  top: 125px;
+  left: 158px;
+  height: 14px;
 }
 
 @keyframes moveOut{
@@ -79,6 +112,7 @@ nav {
   transform: rotate(180deg);
   transition: all 0.3s ease;
 }
+
 
 main {
   margin-top: 60px;
@@ -147,11 +181,36 @@ display: none;
 @media screen and (max-width: 768px){
   body {
     overflow: hidden;
-    padding: 0 40px;
+    padding: 0px 40px 0 40px;
+    margin-top: 0px;
   }
 
   header {
-    padding-top: 40px;
+    padding-top: 30px;
+  }
+
+  #one {
+    top: 40px;
+    left: 20px;
+    height: 75px
+  }
+  
+  #two{
+    top: 60px;
+    left: 45px;
+    height: 25px;
+  }
+  
+  #three{
+    top: 42px;
+    left: 20px;
+    height: 36px;
+  }
+  
+  #four{
+    top: 85px;
+    left: 128px;
+    height: 14px;
   }
   main {
     margin-top: 40px;
@@ -176,19 +235,17 @@ display: none;
 
   .burger{
     display: block;
+    position: absolute;
+    right:20px;
   }
 }
 
 @media screen and (max-width: 400px){
   body {
     overflow: hidden;
-    padding: 0 10px;
     font-size: 14px;
   }
 
-  header {
-    padding-top: 30px;
-  }
   main {
     display: flex;
     margin-top: 10px;
