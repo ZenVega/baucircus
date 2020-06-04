@@ -46,30 +46,30 @@ const navSlide = () => {
 navSlide();
 //switch between displayed divs
 const mainToggle = (obj) => {
-  allMainDivs.forEach(div => div.style.display = 'none');
-  navButtons.forEach(button => button.style.fontWeight = 'normal');
+  let bold = document.querySelector('.bold');
+  bold.classList.remove('bold')
 
 
   switch (obj.target) {
     case aboutButton:
       aboutDiv.style.display = 'block';
-      aboutButton.style.fontWeight = 'bold';
+      aboutButton.classList.add('bold');
       break; 
     case contactButton:
       contactDiv.style.display = 'block';
-      contactButton.style.fontWeight = 'bold';
+      contactButton.classList.add('bold');
       break;
     case projectsButton:
       projectsDiv.style.display = 'block';
-      projectsButton.style.fontWeight = 'bold';
+      projectsButton.classList.add('bold');
       break;
     case impressumButton:
       impressumDiv.style.display = 'block';
-      impressumButton.style.fontWeight = 'bold';
+      impressumButton.classList.add('bold');
       break;
     case datenschutzButton:
       datenschutzDiv.style.display = 'block';
-      datenschutzButton.style.fontWeight = 'bold';
+      datenschutzButton.classList.add('bold');
       break;
   };
 }
