@@ -1,0 +1,65 @@
+/* MAIN DIVS */
+
+main {
+  position: absolute;
+  top: 180px;
+  bottom : 55px;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.6);
+  max-width: 800px;
+  overflow: scroll;
+  border: 10px solid rgba(255, 255, 255, 0.0);
+}
+
+main img {
+  width: 100%;
+}
+
+main p{
+  padding:0px 0px 15px 0px;
+}
+
+.contact, .impressum, .projects, .datenschutz {
+  display: none;
+}
+
+ /* PROJECTS Wrapper */
+.wrapper{
+  display: inline-flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.project{
+  flex: auto;
+  justify-content: center;
+  max-width: 48%;
+  color: black;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.project:hover{
+  background-color: rgba(100, 100, 100, 0.4);
+/*   color: rgb(177, 243, 243); */
+}
+
+.projectHeader{
+  text-align: center;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px){  
+  main {
+    top:20px;
+    position: relative;
+    margin-bottom: 20px;
+    padding:0;
+  }
+  
+  .project{
+    max-width: 100%;
+    margin: 0;
+  }
+
+}

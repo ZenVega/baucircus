@@ -5,18 +5,19 @@
 }
 
 body {
-  padding: 70px 80px 80px 80px;
-  background: url(ressources/images/Background.png);
+  padding: 40px 7%;
+ /*  background: url(ressources/images/Background.png); */
   background-color: rgb(177, 243, 243);
   background-position: center 135px ;
-  background-repeat: repeat-y;
-  background-size: 80%;
+  background-repeat: unset;
+  background-size: 20%;
   font-family: Futura;
   font-size: 16px;
   line-height: 1.6em;
   overflow: hidden;
 }
 
+/* HEADER AND LOGO */
 nav {
   margin: 0 -20vw;
   display: flex;
@@ -40,7 +41,7 @@ nav {
 }
 
 #one {
-  top: 10px;
+  top: -20px;
   left: 50px;
   height: 75px;
   animation: rotate linear 15s infinite;
@@ -48,19 +49,19 @@ nav {
 
 
 #two{
-  top: 30px;
+  top: 0px;
   left: 75px;
   height: 25px;
 }
 
 #three{
-  top: 12px;
+  top: -18px;
   left: 50px;
   height: 36px;
 }
 
 #four{
-  top: 58px;
+  top: 28px;
   left: 158px;
   height: 14px;
 }
@@ -104,24 +105,9 @@ cursor: pointer;
 }
 
 
-main {
-  position: absolute;
-  top: 160px;
-  bottom : 55px;
-  padding: 2em;
-  background-color: rgba(255, 255, 255, 0.6);
-  max-width: 800px;
-  overflow: scroll;
-  border: 10px solid rgba(255, 255, 255, 0.0);
-}
 
-main img {
-  width: 100%;
-}
+/* FOOTER */
 
-main p{
-  padding:10px 0px 15px 0px;
-}
 footer {
   position: fixed;
   bottom: 0;
@@ -135,39 +121,17 @@ footer li {
   cursor: pointer;
 }
 
-.about{
-  display: block;
-}
-
- .contact, .impressum, .projects, .datenschutz {
-  display: none;
-}
-
-
-@media screen and (max-width: 1024px){
-  ul {
-    width: 50%
-  }
-}
-
-
 @media screen and (max-width: 768px){
   body {
-    padding: 0px 40px 0 40px;
+    padding: 0px 20px 0 20px;
     margin-top: 0px;
     overflow-x: hidden;
     overflow-y: scroll;
     font-size: 14px;
   }
-
+  
   .logo img {
     margin-top:0px
-  }
-  
-  main {
-    top:20px;
-    position: relative;
-    margin-bottom: 20px;;
   }
 
   footer {
@@ -195,10 +159,6 @@ footer li {
     display: block;
     position: absolute;
     right:20px;
-  }
-
-  footer{
-    position:relative;
   }
 
   #one {

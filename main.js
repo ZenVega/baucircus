@@ -7,21 +7,18 @@ const datenschutzButton = document.querySelector('.datenschutzButton');
 
 const navButtons = [projectsButton, contactButton, aboutButton, impressumButton, datenschutzButton];
 
-const allMainDivs = document.querySelectorAll('main div');
+const allMainDivs = document.querySelectorAll('.main');
 const aboutDiv = document.querySelector('.about');
 const contactDiv = document.querySelector('.contact');
 const projectsDiv = document.querySelector('.projects');
 const impressumDiv = document.querySelector('.impressum');
 const datenschutzDiv = document.querySelector('.datenschutz');
 
-
-
-
-
 //switch between displayed divs
 const mainToggle = (obj) => {
+  allMainDivs.forEach(div => div.style.display = 'none');
   let bold = document.querySelector('.bold');
-  bold.classList.remove('bold')
+  bold.classList.remove('bold');
 
 
   switch (obj.target) {

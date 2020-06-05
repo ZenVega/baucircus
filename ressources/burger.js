@@ -14,7 +14,7 @@ const navSlide = () => {
       if(isBurgerOpen){
         logoP2.style.animation = `moveBack 0.5s ease-in forwards`;  
         logoP4.style.animation = `moveUp 0.5s ease-in 0.3s forwards`;
-        logoP3.style.animation = `fadeIn 0.3s ease-in 0.5s forwards`;
+        logoP3.style.animation = `fadeIn 0.8s ease 0.5s forwards`;
         isBurgerOpen = false;
 
       } else if(!isBurgerOpen){
