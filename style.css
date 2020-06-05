@@ -5,7 +5,7 @@
 }
 
 body {
-  padding: 80px;
+  padding: 70px 80px 80px 80px;
   background: url(ressources/images/Background.png);
   background-color: rgb(177, 243, 243);
   background-position: center 135px ;
@@ -22,7 +22,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 60px;
+  height: 80px;
   background-color: rgba(255, 255, 255, 0.6);
 }
 
@@ -31,27 +31,44 @@ nav {
 }
 
 .logo {
-  letter-spacing: 5px;
+ padding-top: 150px;
 }
 
-@keyframes moveOut{
-  0%{
-    margin-top: 0px;
-  }
-  100%{
-    margin-top: -60px;
-  }
+.logo img {
+  position:absolute;
+  margin-top:70px
 }
 
-@keyframes moveBack{
-  0%{
-    margin-top: -60px;
-  }
-  100%{
-    margin-top: 0px;
-  }
+#one {
+  top: 10px;
+  left: 50px;
+  height: 75px;
+  animation: rotate linear 15s infinite;
 }
 
+
+#two{
+  top: 30px;
+  left: 75px;
+  height: 25px;
+}
+
+#three{
+  top: 12px;
+  left: 50px;
+  height: 36px;
+}
+
+#four{
+  top: 58px;
+  left: 158px;
+  height: 14px;
+}
+
+@keyframes rotate{
+  from{ transform: rotate(0deg);}
+  to{ transform: rotate(360deg); }
+}
 
 .nav-links {
   list-style-type: none;
@@ -86,6 +103,7 @@ cursor: pointer;
   transition: all 0.3s ease;
 }
 
+
 main {
   position: absolute;
   top: 160px;
@@ -105,7 +123,7 @@ main p{
   padding:10px 0px 15px 0px;
 }
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   height: 55px;
   display: flex;
@@ -117,23 +135,11 @@ footer li {
   cursor: pointer;
 }
 
-.about {
+.about{
   display: block;
 }
 
-.contact {
-  display: none;
-}
-
-.impressum {
-display: none;
-}
-
-.projects {
-  display: none;
-}
-
-.datenschutz {
+ .contact, .impressum, .projects, .datenschutz {
   display: none;
 }
 
@@ -145,16 +151,19 @@ display: none;
 }
 
 
-
 @media screen and (max-width: 768px){
   body {
-    overflow: scroll;
-    padding: 0 40px;
+    padding: 0px 40px 0 40px;
+    margin-top: 0px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-size: 14px;
   }
 
-  header {
-    padding-top: 40px;
+  .logo img {
+    margin-top:0px
   }
+  
   main {
     top:20px;
     position: relative;
@@ -163,6 +172,7 @@ display: none;
 
   footer {
     position: relative;
+
   }
 
   .nav-links {
@@ -170,7 +180,7 @@ display: none;
     left: 0px;
     height:60px;
     width: 70%;
-    top: 40px;
+    top: 10px;
     display: flex;
     align-items: center;
     transform: translateX(150%);
@@ -183,48 +193,115 @@ display: none;
 
   .burger{
     display: block;
-  }
-}
-
-@media screen and (max-width: 400px){
-  body {
-    overflow: hidden;
-    padding: 0 10px;
-    font-size: 14px;
+    position: absolute;
+    right:20px;
   }
 
-  header {
-    padding-top: 30px;
+  footer{
+    position:relative;
   }
-  main {
-    display: flex;
-    margin-top: 10px;
-    max-height: 70vh;
+
+  #one {
+    top: 10px;
+    left: 20px;
+    height: 75px
   }
-}
 
-.nav-active{
-  transform: translateX(0%);
-}
+  #two{
+    top: 30px;
+    left: 45px;
+    height: 25px;
+  }
 
-@keyframes navLinkFade{
-    from{
-      opacity: 0;
-      transform: translateX(150%);
+  #three{
+    top: 12px;
+    left: 20px;
+    height: 36px;
+  }
+
+  #four{
+    top: 58px;
+    left: 128px;
+    height: 14px;
+  }
+
+  @keyframes moveOut{
+    0%{
+      top: 30px;
     }
-    to{
+    100%{
+      top: 0;
+    }
+  }
+  
+  @keyframes moveBack{
+    0%{
+      top: 0;
+    }
+    100%{
+      top: 30px;
+    }
+  }
+  
+  @keyframes fadeOut{
+    0%{
       opacity: 1;
-      transform: translateX(0%);
     }
-}
+    100%{
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fadeIn{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  
+  @keyframes moveDown{
+    0%{
+      top: 58px;
+    }
+    100% {
+      top:65px;
+    }
+  }
+  
+  @keyframes moveUp{
+    0%{
+      top: 65px;
+    }
+    100% {
+      top:58px;
+    }
+  }
 
-.motion .line1{
-  transform: rotate(-45deg) translate(-5px, 5px);
-}
-.motion .line2{
-  opacity: 0;
-}
-.motion .line3{
-  transform: rotate(45deg) translate(-5px, -5px);
-}
+  .nav-active{
+    transform: translateX(0%);
+  }
 
+  @keyframes navLinkFade{
+      from{
+        opacity: 0;
+        transform: translateX(150%);
+      }
+      to{
+        opacity: 1;
+        transform: translateX(0%);
+      }
+  }
+
+  .motion .line1{
+    transform: rotate(-45deg) translate(-5px, 5px);
+  }
+  .motion .line2{
+    opacity: 0;
+  }
+  .motion .line3{
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
+
+}
