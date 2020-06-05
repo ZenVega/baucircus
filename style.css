@@ -147,7 +147,8 @@ footer li {
   body {
     padding: 0px 40px 0 40px;
     margin-top: 0px;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
     font-size: 14px;
   }
 
