@@ -1,13 +1,16 @@
 body {
   overflow-y: scroll;
 }
+
 main h2{
-  padding: 20px;;
+  padding: 20px;
 }
 
 .wrapper{
   position: absolute;
   top: 180px;
+  left:50px;
+  right:50px;
   bottom : 55px;
   display: flex;
 }
@@ -29,6 +32,8 @@ main h2{
 .stepWrapper{
   position: absolute;
   top: 800px;
+  left:50px;
+  right:50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -66,6 +71,8 @@ main h2{
   .stepWrapper{
     position: relative;
     top: 20PX;
+    left:0px;
+    right:0px;
   }
   .step{
     width: 48%;
