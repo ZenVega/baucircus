@@ -2,11 +2,12 @@ body {
   overflow-y: scroll;
 }
 
+
 main h2{
   padding: 20px;
 }
 
-.wrapper{
+.wrapperTop{
   position: absolute;
   top: 180px;
   left:50px;
@@ -51,10 +52,11 @@ main h2{
 }
 
 @media screen and (max-width: 800px){
-  .wrapper{
+  .wrapperTop{
     position: relative;
     top: 0px;
-    flex-wrap: wrap
+    left: 0;
+    flex-wrap: wrap;
   }
 
   .topImg{
