@@ -175,76 +175,36 @@ footer li {
     top: 35px;
     left: 45px;
     height: 25px;
+    transition: all 0.3s ease;
   }
 
   #three{
     top: 17px;
     left: 20px;
     height: 36px;
+    transition: all 0.5s ease;
   }
 
   #four{
     top: 63px;
     left: 128px;
     height: 14px;
+    transition: all .5s ease;
   }
 
-  @keyframes moveOut{
-    0%{
-      top: 35px;
-    }
-    100%{
-      top: 5PX;
-    }
-  }
-  
-  @keyframes moveBack{
-    0%{
-      top: 5px;
-    }
-    100%{
-      top: 35px;
-    }
-  }
-  
-  @keyframes fadeOut{
-    0%{
-      opacity: 1;
-    }
-    100%{
-      opacity: 0;
-    }
-  }
-  
-  @keyframes fadeIn{
-    0%{
-      opacity: 0;
-    }
-    100%{
-      opacity: 1;
-    }
-  }
-  
-  @keyframes moveDown{
-    0%{
-      top: 63px;
-    }
-    100% {
-      top:70px;
-    }
-  }
-  
-  @keyframes moveUp{
-    0%{
-      top: 70px;
-    }
-    100% {
-      top:63px;
-    }
-  }
 
-  .nav-active{
+  .nav-active .nav-links{
     transform: translateX(0%);
+  }
+
+  .nav-active #two{
+    transform: translateY(-30px);
+  }
+  .nav-active #three{
+    opacity: 0;
+  }
+  .nav-active #four{
+    transform: translateY(8px);
   }
 
   @keyframes navLinkFade{
