@@ -17,7 +17,7 @@ main h2{
 }
 
 .topImg{
-  background-image: url("/ressources/images/pro1head.jpg");
+  background-image: url("../../ressources/images/pro1head.jpg");
   width: 50%;
   background-size: auto 100%;
   background-repeat: no-repeat;
