@@ -7,7 +7,7 @@
 }
 
 body {
-  padding: 40px 7%;
+  padding: 40px;
  /*  background: url(ressources/images/Background.png); */
   background-color: rgb(183, 209, 221);
   /* #838996  rgb(167, 153, 168)  rgb(162, 145, 160);*/
@@ -17,12 +17,12 @@ body {
   font-family: Futura;
   font-size: 16px;
   line-height: 1.6em;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 /* HEADER AND LOGO */
 nav {
-  margin: 0 -20vw;
+  margin: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -78,7 +78,7 @@ nav {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
-  width: 30%;
+  width: 60%;
 }
 
 .nav-links li{
@@ -112,8 +112,7 @@ cursor: pointer;
 /* FOOTER */
 
 footer {
-  position: fixed;
-  bottom: 0;
+  margin-top: 20px;
   height: 55px;
   display: flex;
   list-style-type: none;
@@ -146,7 +145,7 @@ footer li {
     position: absolute;
     left: 0px;
     height:60px;
-    width: 70%;
+    width: 90%;
     top: 20px;
     display: flex;
     align-items: center;
@@ -200,9 +199,11 @@ footer li {
   .nav-active #two{
     transform: translateY(-30px);
   }
+
   .nav-active #three{
     opacity: 0;
   }
+  
   .nav-active #four{
     transform: translateY(8px);
   }

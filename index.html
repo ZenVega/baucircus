@@ -15,14 +15,17 @@
     <nav>
       <div class="logo">
         <img id="one" src="ressources/images/logo_p1.png" alt="">
+        <img id="one" src="ressources/images/logo_p1.png" alt="">
         <img id="two" src="ressources/images/logo_p2.png" alt="">
         <img id="three" src="ressources/images/logo_p3.png" alt="">
-        <img id="four" src="ressources/images/logo_p4.png" alt="">
+        <!-- <img id="four" src="ressources/images/logo_p4.png" alt=""> -->
       </div>
       <ul class="nav-links">
+        <li class="contactButton">news</li>
         <li class="aboutButton bold">about</li>
-        <li class="contactButton">contact</li>
         <li class="projectsButton">projects</li>
+        <li class="open-source">open-source</li>
+        <li class="languageSwitch"> <strong>de</strong>|eng</li>
       </ul>
       <div class="burger">
         <div class="line1"></div>
@@ -33,12 +36,21 @@
   </header>
   <main>
     <div class="main about">
+      <div>
+        <h1 class="mainHeader">about</h1>
+        <br> 
       <p class="aboutText">Wir sind ein Netzwerk aus handwerkenden Architekt*innen, und sozialarbeitenden
         Handwerker*innen. Als Baucircus reisen wir mit unserer nomadischen Werkstatt, besuchen Gemeinschaften und laden
-        sie vor Ort ein, aktiv an der Gestaltung und Entwicklung ihres eigenen Lebensumfelds teilzuhaben. <br> <br>
-        <img src="ressources/images/tent.jpg" alt="">
-        <br> ...more about us soon!
+        sie vor Ort ein, aktiv an der Gestaltung und Entwicklung ihres eigenen Lebensumfelds teilzuhaben. <br>
+        </p>
+        <br> 
+        ...more about us soon!
         Contact us if you can't wait! </p>
+      </div>
+      <div>
+        <img src="ressources/images/tent.jpg" alt="">
+        
+      </div>
     </div>
     <div class="main contact">
       <p class="contactText">info@baucircus.net
@@ -135,7 +147,9 @@
     </div>
 
     <div class="main projects">
-      <p class="projectsText"> Lorem ipsum dolor sit amet consectetur adipisicing elit. In velit cumque voluptate vero
+      <h1 class="mainHeader">projects</h1>
+      <p class="projectsText"> 
+        <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. In velit cumque voluptate vero
         quidem commodi? Nulla qui maiores molestias error tempora officia harum nisi, vitae maxime blanditiis hic quam
         pariatur.</p>
       <div class="wrapper">
@@ -188,7 +202,8 @@
   <footer>
     <li class="impressumButton">impressum</li>
     <li class="datenschutzButton">datenschutz</li>
-    <li class="languageSwitch"> <strong>de</strong>|eng</li>
+    <li class="contactButton">get in touch: info[at]baucircus.net </li>
+    
 
   </footer>
   <script src="./main.js"></script>

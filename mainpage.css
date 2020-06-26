@@ -1,25 +1,34 @@
 /* MAIN DIVS */
 
 main {
-  position: absolute;
-  top: 180px;
-  left:50px;
-  right: 50px;
-  bottom : 55px;
+  position: relative;
+  top: 20px;
   padding: 2em;
-  background-color: rgba(255, 255, 255, 0.6);
-  max-width: 800px;
+  background-color: #ffffff99;
   overflow: scroll;
   border: 10px solid rgba(255, 255, 255, 0.0);
+
 }
 
+.about{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap:2%;
+}
+
+.about > div{
+
+  width: 48%;
+}
 main img {
-  width: 100%;
+max-width: 100%;
 }
 
-main p{
-  padding:0px 0px 15px 0px;
+.mainHeader{
+  margin-bottom: 10px;
 }
+
 
 .contact, .impressum, .projects, .datenschutz {
   display: none;
@@ -61,6 +70,13 @@ main p{
     padding:0;
   }
   
+  .about{
+    display: block;
+  }
+  .about > div{
+    width: 100%;
+  }
+
   .project{
     max-width: 100%;
     margin: 0;

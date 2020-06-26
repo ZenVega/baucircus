@@ -23,7 +23,7 @@ const mainToggle = (obj) => {
 
   switch (obj.target) {
     case aboutButton:
-      aboutDiv.style.display = 'block';
+      aboutDiv.style.display = 'flex';
       aboutButton.classList.add('bold');
       break; 
     case contactButton:
