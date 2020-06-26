@@ -1,11 +1,12 @@
 const projectsButton = document.querySelector('.projectsButton');
 const contactButton = document.querySelector('.contactButton');
 const aboutButton = document.querySelector('.aboutButton');
+const openSourceButton = document.querySelector('.openSourceButton');
 
 const impressumButton = document.querySelector('.impressumButton');
 const datenschutzButton = document.querySelector('.datenschutzButton');
 
-const navButtons = [projectsButton, contactButton, aboutButton, impressumButton, datenschutzButton];
+const navButtons = [projectsButton, contactButton, aboutButton, impressumButton, datenschutzButton, openSourceButton];
 
 const allMainDivs = document.querySelectorAll('.main');
 const aboutDiv = document.querySelector('.about');
@@ -41,6 +42,11 @@ const mainToggle = (obj) => {
     case datenschutzButton:
       datenschutzDiv.style.display = 'block';
       datenschutzButton.classList.add('bold');
+      break;
+    case openSourceButton:
+      console.log('opensource');
+      datenschutzDiv.style.display = 'block';
+      openSourceButton.classList.add('bold');
       break;
   };
 }
